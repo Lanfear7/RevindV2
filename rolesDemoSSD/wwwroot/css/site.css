@@ -1,24 +1,59 @@
-﻿/*****TYPOGRAPHY*******/
+﻿/*****---------------TYPOGRAPHY-------------*******/
 a, h1, h2, h3, h4, h5, p{
     color: white;
 }
+h1, h2, h3, h4, h5 {
+    font-family: 'Noto Serif', serif;
+    line-height: 1.4;
+    font-weight: 700;
+}
+a, p, span, li {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.2;
+}
+h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 35px;
+}
 html {
   position: relative;
+  margin: auto;
 }
+.container{
+    max-width: 1300px;
 
+}
 body {
   background: url(../images/bg.jpg)
 }
-/*******NAVIGATION*******/
+
+
+/*******------------------NAVIGATION---------------*******/
 nav .container{
     display: flex;
     justify-content: space-between;
+}
+.navbar-nav{
+    justify-content: end;
 }
 .navbar-brand img{
     width: 150px;
 }
 
 
+/*********-------------------Home page---------------*********/
+.home-banner{
+    max-width: 400px;
+    min-height: 500px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 
 @media (min-width: 768px) {
