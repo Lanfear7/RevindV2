@@ -1,6 +1,10 @@
 C:\Users\stell\OneDrive\Desktop\RewindSSD\rolesDemoSSD\obj\Release\net5.0\PubTmp\Out\rolesDemoSSD.exe
 C:\Users\stell\OneDrive\Desktop\RewindSSD\rolesDemoSSD\obj\Release\net5.0\PubTmp\Out\wwwroot\css\site.css
 C:\Users\stell\OneDrive\Desktop\RewindSSD\rolesDemoSSD\obj\Release\net5.0\PubTmp\Out\wwwroot\favicon.ico
+C:\Users\stell\OneDrive\Desktop\RewindSSD\rolesDemoSSD\obj\Release\net5.0\PubTmp\Out\wwwroot\images\bg.jpg
+C:\Users\stell\OneDrive\Desktop\RewindSSD\rolesDemoSSD\obj\Release\net5.0\PubTmp\Out\wwwroot\images\Rewind logo.svg
+C:\Users\stell\OneDrive\Desktop\RewindSSD\rolesDemoSSD\obj\Release\net5.0\PubTmp\Out\wwwroot\images\rewind-logo.png
+C:\Users\stell\OneDrive\Desktop\RewindSSD\rolesDemoSSD\obj\Release\net5.0\PubTmp\Out\wwwroot\images\rewind-white.png
 C:\Users\stell\OneDrive\Desktop\RewindSSD\rolesDemoSSD\obj\Release\net5.0\PubTmp\Out\wwwroot\js\site.js
 C:\Users\stell\OneDrive\Desktop\RewindSSD\rolesDemoSSD\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Users\stell\OneDrive\Desktop\RewindSSD\rolesDemoSSD\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
