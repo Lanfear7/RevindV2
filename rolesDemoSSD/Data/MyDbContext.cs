@@ -43,6 +43,9 @@ namespace rolesDemoSSD.Data
             [Key]
             public int UserID { get; set; }
             public string UserName { get; set; }
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+            public int Moderator { get; set; }
 
             // Navigation properties.
             // Child.

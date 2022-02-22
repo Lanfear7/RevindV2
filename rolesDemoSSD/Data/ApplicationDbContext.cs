@@ -9,45 +9,40 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace rolesDemoSSD.Data
 {
-    public class Produce
+    public class Review
     {
         [Key]
-        public int ProduceID { get; set; }
-        public string Description { get; set; }
-
-        // Navigation properties.
+        public int ReviewID { get; set; }
+        public string ReviewContent { get; set; }
+        public string ReviewDate { get; set; }
+        public int Rating { get; set; }
+        public string RatingDate { get; set; }
+        public int Flag { get; set; }
+        
+   /*     // Navigation properties.
         // Child.        
         public virtual ICollection<ProduceSupplier>
             ProduceSuppliers
-        { get; set; }
+        { get; set; }*/
     }
 
-    public class Supplier
+    public class Movie
     {
         [Key]
-        public int SupplierID { get; set; }
-        public string SupplierName { get; set; }
-
-        // Navigation properties.
+        public int MovieID { get; set; }
+        public string MovieName { get; set; }
+        public string Genre { get; set; }
+        public string Duration { get; set; }
+        public string ReleaseDate { get; set; }
+        public string Distributor { get; set; }
+   /*     // Navigation properties.
         // Child.
         public virtual ICollection<ProduceSupplier>
             ProduceSuppliers
-        { get; set; }
+        { get; set; }*/
     }
 
-    public class ProduceSupplier
-    {
-        [Key, Column(Order = 0)]
-        public int ProduceID { get; set; }
-        [Key, Column(Order = 1)]
-        public int SupplierID { get; set; }
-        public int Qty { get; set; }
 
-        // Navigation properties.
-        // Parents.
-        public virtual Produce Produce { get; set; }
-        public virtual Supplier Supplier { get; set; }
-    }
 
     public class MyRegisteredUser
     {
@@ -79,9 +74,8 @@ namespace rolesDemoSSD.Data
 
 
         // Define entity collections.
-        public DbSet<Produce> Produces { get; set; }
-        public DbSet<Supplier> Suppliers { get; set; }
-        public DbSet<ProduceSupplier> ProduceSuppliers { get; set; }
+        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Review> Reviews { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -90,7 +84,7 @@ namespace rolesDemoSSD.Data
             base.OnModelCreating(modelBuilder);
 
             // Define composite primary keys.
-            modelBuilder.Entity<ProduceSupplier>()
+         /*   modelBuilder.Entity<ProduceSupplier>()
                 .HasKey(ps => new { ps.ProduceID, ps.SupplierID });
 
             // Define foreign keys here. Do not use foreign key annotations.
@@ -104,18 +98,31 @@ namespace rolesDemoSSD.Data
                 .HasOne(p => p.Supplier)
                 .WithMany(p => p.ProduceSuppliers)
                 .HasForeignKey(fk => new { fk.SupplierID })
-                .OnDelete(DeleteBehavior.Restrict); // Prevent cascade delete
+                .OnDelete(DeleteBehavior.Restrict); // Prevent cascade delete*/
             
             
-            modelBuilder.Entity<Produce>().HasData(
-                new Produce { ProduceID = 1, Description = "Oranges" });
+            modelBuilder.Entity<Movie>().HasData(
+                new Movie 
+                { 
+                    MovieID = 1, MovieName = "Deadpool", 
+                    Genre="Action/Adventure", Duration= "190 Minutes", 
+                    ReleaseDate= "02/21/2016", Distributor = "20th Century Fox"
+                });
 
-            modelBuilder.Entity<Supplier>().HasData(
-                new Supplier { SupplierID = 1, SupplierName = "Kin's Market" },
-                new Supplier { SupplierID = 2, SupplierName = "Fresh Street Market" });
-
+            modelBuilder.Entity<Review>().HasData(
+                new Review
+                {
+                    ReviewID = 1,
+                    ReviewContent = "Amazing movie. I loved it.",
+                    ReviewDate = "09/03/2020",
+                    Rating = 4,
+                    RatingDate = "09/03/2020",
+                    Flag = 1
+                });
+               
+/*
             modelBuilder.Entity<ProduceSupplier>().HasData(
-                new ProduceSupplier { SupplierID = 1, ProduceID = 1, Qty = 25 });
+                new ProduceSupplier { SupplierID = 1, ProduceID = 1, Qty = 25 });*/
         }
     }
 }

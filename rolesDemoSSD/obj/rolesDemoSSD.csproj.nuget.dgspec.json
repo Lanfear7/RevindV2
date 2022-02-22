@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Royce\\Desktop\\project\\02-22\\rolesDemoSSD\\rolesDemoSSD.csproj": {}
+    "C:\\Users\\stell\\OneDrive\\Desktop\\RewindV2\\rolesDemoSSD\\rolesDemoSSD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Royce\\Desktop\\project\\02-22\\rolesDemoSSD\\rolesDemoSSD.csproj": {
+    "C:\\Users\\stell\\OneDrive\\Desktop\\RewindV2\\rolesDemoSSD\\rolesDemoSSD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Royce\\Desktop\\project\\02-22\\rolesDemoSSD\\rolesDemoSSD.csproj",
+        "projectUniqueName": "C:\\Users\\stell\\OneDrive\\Desktop\\RewindV2\\rolesDemoSSD\\rolesDemoSSD.csproj",
         "projectName": "rolesDemoSSD",
-        "projectPath": "C:\\Users\\Royce\\Desktop\\project\\02-22\\rolesDemoSSD\\rolesDemoSSD.csproj",
-        "packagesPath": "C:\\Users\\Royce\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Royce\\Desktop\\project\\02-22\\rolesDemoSSD\\obj\\",
+        "projectPath": "C:\\Users\\stell\\OneDrive\\Desktop\\RewindV2\\rolesDemoSSD\\rolesDemoSSD.csproj",
+        "packagesPath": "C:\\Users\\stell\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\stell\\OneDrive\\Desktop\\RewindV2\\rolesDemoSSD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Royce\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\stell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -97,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }
