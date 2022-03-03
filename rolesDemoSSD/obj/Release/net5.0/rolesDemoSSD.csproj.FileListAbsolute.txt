@@ -1134,3 +1134,5 @@ C:\Users\mykel\Documents\GitHub\RewindV2\rolesDemoSSD\obj\Release\net5.0\rolesDe
 C:\Users\mykel\Documents\GitHub\RewindV2\rolesDemoSSD\obj\Release\net5.0\ref\rolesDemoSSD.dll
 C:\Users\mykel\Documents\GitHub\RewindV2\rolesDemoSSD\obj\Release\net5.0\rolesDemoSSD.pdb
 C:\Users\mykel\Documents\GitHub\RewindV2\rolesDemoSSD\obj\Release\net5.0\rolesDemoSSD.genruntimeconfig.cache
+C:\Users\brenn\OneDrive\Desktop\RewindV2\rolesDemoSSD\bin\Release\net5.0\RestSharp.dll
+C:\Users\brenn\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Profile\Profile.cshtml.g.cs

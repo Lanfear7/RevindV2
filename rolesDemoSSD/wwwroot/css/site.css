@@ -55,7 +55,79 @@ nav .container{
     flex-direction: column;
 }
 
+/*********-------------------Create Account page---------------*********/
+main{
+    margin-top: 70px;
+}
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col-md-4{
+    width: 100%
+}
+.RegisterFrom{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 60vh;
+}
+.text-danger{
+    flex-basis:100%;
+}
+.form-group{
+    flex-basis: 100%
+}
+.half{
+    flex-basis: 49%;
+}
+.PrivatePolicy p{
+    display: inline;
+}
+.btn {
+    height: 50px;
+    background-color: #04c796;
+    border: none;
+    width: 35%;
+    text-align: center;
+}
+
+/*********-------------------Login page---------------*********/
+.thirdParty{
+    border: none;
+    color: white;
+    width: 200px;
+    height: 30px;
+    margin-bottom: 10px; 
+    border-radius: 5px;
+}
+.facebook {
+    background-color: blue;
+}
+.signin{
+    display: flex;
+    justify-content: center;
+}
+.google {
+    background-color: red;
+}
+.OtherLogin{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+.OtherLogin p{
+    flex-basis: 100%;
+    text-align: center;
+}
+.checkbox label{
+    color: white;
+}
+
 
 @media (min-width: 768px) {
-
 }
