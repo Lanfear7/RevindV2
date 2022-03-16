@@ -59,6 +59,7 @@ namespace rolesDemoSSD.Data
 
     public class ApplicationDbContext : IdentityDbContext
     {
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
@@ -124,5 +125,7 @@ namespace rolesDemoSSD.Data
             modelBuilder.Entity<ProduceSupplier>().HasData(
                 new ProduceSupplier { SupplierID = 1, ProduceID = 1, Qty = 25 });*/
         }
+
+        public DbSet<rolesDemoSSD.ViewModels.MovieVM> MovieVM { get; set; }
     }
 }

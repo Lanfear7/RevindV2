@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace rolesDemoSSD.Migrations
 {
-    public partial class initialCreate : Migration
+    public partial class initialcreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -44,6 +44,91 @@ namespace rolesDemoSSD.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Movies",
+                columns: table => new
+                {
+                    MovieID = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    MovieName = table.Column<string>(type: "TEXT", nullable: true),
+                    Genre = table.Column<string>(type: "TEXT", nullable: true),
+                    Duration = table.Column<string>(type: "TEXT", nullable: true),
+                    ReleaseDate = table.Column<string>(type: "TEXT", nullable: true),
+                    Distributor = table.Column<string>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Movies", x => x.MovieID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MyRegisteredUsers",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    FirstName = table.Column<string>(type: "TEXT", nullable: false),
+                    Email = table.Column<string>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MyRegisteredUsers", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Reviews",
+                columns: table => new
+                {
+                    ReviewID = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    ReviewContent = table.Column<string>(type: "TEXT", nullable: true),
+                    ReviewDate = table.Column<string>(type: "TEXT", nullable: true),
+                    Rating = table.Column<int>(type: "INTEGER", nullable: false),
+                    RatingDate = table.Column<string>(type: "TEXT", nullable: true),
+                    Flag = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Reviews", x => x.ReviewID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "RoleVM",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "TEXT", nullable: false),
+                    RoleName = table.Column<string>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RoleVM", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UserRoleVM",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Email = table.Column<string>(type: "TEXT", nullable: false),
+                    Role = table.Column<string>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserRoleVM", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UserVM",
+                columns: table => new
+                {
+                    Email = table.Column<string>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserVM", x => x.Email);
                 });
 
             migrationBuilder.CreateTable(
@@ -152,6 +237,16 @@ namespace rolesDemoSSD.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "Movies",
+                columns: new[] { "MovieID", "Distributor", "Duration", "Genre", "MovieName", "ReleaseDate" },
+                values: new object[] { 1, "20th Century Fox", "190 Minutes", "Action/Adventure", "Deadpool", "02/21/2016" });
+
+            migrationBuilder.InsertData(
+                table: "Reviews",
+                columns: new[] { "ReviewID", "Flag", "Rating", "RatingDate", "ReviewContent", "ReviewDate" },
+                values: new object[] { 1, 1, 4, "09/03/2020", "Amazing movie. I loved it.", "09/03/2020" });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -206,6 +301,24 @@ namespace rolesDemoSSD.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "Movies");
+
+            migrationBuilder.DropTable(
+                name: "MyRegisteredUsers");
+
+            migrationBuilder.DropTable(
+                name: "Reviews");
+
+            migrationBuilder.DropTable(
+                name: "RoleVM");
+
+            migrationBuilder.DropTable(
+                name: "UserRoleVM");
+
+            migrationBuilder.DropTable(
+                name: "UserVM");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

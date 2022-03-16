@@ -9,8 +9,8 @@ using rolesDemoSSD.Data;
 namespace rolesDemoSSD.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220129201254_initialCreate")]
-    partial class initialCreate
+    [Migration("20220316191702_initialcreate")]
+    partial class initialcreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -212,6 +212,142 @@ namespace rolesDemoSSD.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("rolesDemoSSD.Data.Movie", b =>
+                {
+                    b.Property<int>("MovieID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Distributor")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Duration")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Genre")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("MovieName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ReleaseDate")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("MovieID");
+
+                    b.ToTable("Movies");
+
+                    b.HasData(
+                        new
+                        {
+                            MovieID = 1,
+                            Distributor = "20th Century Fox",
+                            Duration = "190 Minutes",
+                            Genre = "Action/Adventure",
+                            MovieName = "Deadpool",
+                            ReleaseDate = "02/21/2016"
+                        });
+                });
+
+            modelBuilder.Entity("rolesDemoSSD.Data.MyRegisteredUser", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("MyRegisteredUsers");
+                });
+
+            modelBuilder.Entity("rolesDemoSSD.Data.Review", b =>
+                {
+                    b.Property<int>("ReviewID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Flag")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("RatingDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ReviewContent")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ReviewDate")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("ReviewID");
+
+                    b.ToTable("Reviews");
+
+                    b.HasData(
+                        new
+                        {
+                            ReviewID = 1,
+                            Flag = 1,
+                            Rating = 4,
+                            RatingDate = "09/03/2020",
+                            ReviewContent = "Amazing movie. I loved it.",
+                            ReviewDate = "09/03/2020"
+                        });
+                });
+
+            modelBuilder.Entity("rolesDemoSSD.ViewModels.RoleVM", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("RoleName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("RoleVM");
+                });
+
+            modelBuilder.Entity("rolesDemoSSD.ViewModels.UserRoleVM", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("UserRoleVM");
+                });
+
+            modelBuilder.Entity("rolesDemoSSD.ViewModels.UserVM", b =>
+                {
+                    b.Property<string>("Email")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Email");
+
+                    b.ToTable("UserVM");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

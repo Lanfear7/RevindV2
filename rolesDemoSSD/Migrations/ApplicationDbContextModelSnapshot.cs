@@ -212,6 +212,43 @@ namespace rolesDemoSSD.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("rolesDemoSSD.Data.Movie", b =>
+                {
+                    b.Property<int>("MovieID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Distributor")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Duration")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Genre")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("MovieName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ReleaseDate")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("MovieID");
+
+                    b.ToTable("Movies");
+
+                    b.HasData(
+                        new
+                        {
+                            MovieID = 1,
+                            Distributor = "20th Century Fox",
+                            Duration = "190 Minutes",
+                            Genre = "Action/Adventure",
+                            MovieName = "Deadpool",
+                            ReleaseDate = "02/21/2016"
+                        });
+                });
+
             modelBuilder.Entity("rolesDemoSSD.Data.MyRegisteredUser", b =>
                 {
                     b.Property<int>("ID")
@@ -231,76 +268,40 @@ namespace rolesDemoSSD.Migrations
                     b.ToTable("MyRegisteredUsers");
                 });
 
-            modelBuilder.Entity("rolesDemoSSD.Data.Produce", b =>
+            modelBuilder.Entity("rolesDemoSSD.Data.Review", b =>
                 {
-                    b.Property<int>("ProduceID")
+                    b.Property<int>("ReviewID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Description")
+                    b.Property<int>("Flag")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("RatingDate")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("ProduceID");
-
-                    b.ToTable("Produces");
-
-                    b.HasData(
-                        new
-                        {
-                            ProduceID = 1,
-                            Description = "Oranges"
-                        });
-                });
-
-            modelBuilder.Entity("rolesDemoSSD.Data.ProduceSupplier", b =>
-                {
-                    b.Property<int>("ProduceID")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("SupplierID")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("Qty")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("ProduceID", "SupplierID");
-
-                    b.HasIndex("SupplierID");
-
-                    b.ToTable("ProduceSuppliers");
-
-                    b.HasData(
-                        new
-                        {
-                            ProduceID = 1,
-                            SupplierID = 1,
-                            Qty = 25
-                        });
-                });
-
-            modelBuilder.Entity("rolesDemoSSD.Data.Supplier", b =>
-                {
-                    b.Property<int>("SupplierID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("SupplierName")
+                    b.Property<string>("ReviewContent")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("SupplierID");
+                    b.Property<string>("ReviewDate")
+                        .HasColumnType("TEXT");
 
-                    b.ToTable("Suppliers");
+                    b.HasKey("ReviewID");
+
+                    b.ToTable("Reviews");
 
                     b.HasData(
                         new
                         {
-                            SupplierID = 1,
-                            SupplierName = "Kin's Market"
-                        },
-                        new
-                        {
-                            SupplierID = 2,
-                            SupplierName = "Fresh Street Market"
+                            ReviewID = 1,
+                            Flag = 1,
+                            Rating = 4,
+                            RatingDate = "09/03/2020",
+                            ReviewContent = "Amazing movie. I loved it.",
+                            ReviewDate = "09/03/2020"
                         });
                 });
 
@@ -396,35 +397,6 @@ namespace rolesDemoSSD.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("rolesDemoSSD.Data.ProduceSupplier", b =>
-                {
-                    b.HasOne("rolesDemoSSD.Data.Produce", "Produce")
-                        .WithMany("ProduceSuppliers")
-                        .HasForeignKey("ProduceID")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("rolesDemoSSD.Data.Supplier", "Supplier")
-                        .WithMany("ProduceSuppliers")
-                        .HasForeignKey("SupplierID")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Produce");
-
-                    b.Navigation("Supplier");
-                });
-
-            modelBuilder.Entity("rolesDemoSSD.Data.Produce", b =>
-                {
-                    b.Navigation("ProduceSuppliers");
-                });
-
-            modelBuilder.Entity("rolesDemoSSD.Data.Supplier", b =>
-                {
-                    b.Navigation("ProduceSuppliers");
                 });
 #pragma warning restore 612, 618
         }
