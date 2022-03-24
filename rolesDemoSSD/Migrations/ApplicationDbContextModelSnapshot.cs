@@ -230,6 +230,9 @@ namespace rolesDemoSSD.Migrations
                     b.Property<string>("MovieName")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("PosterSource")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("ReleaseDate")
                         .HasColumnType("TEXT");
 
@@ -245,6 +248,7 @@ namespace rolesDemoSSD.Migrations
                             Duration = "190 Minutes",
                             Genre = "Action/Adventure",
                             MovieName = "Deadpool",
+                            PosterSource = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQdFU5DLFLwDFTzE_85beWRTBRmKUuVCzUcnxjgDE_YWqMwncEx",
                             ReleaseDate = "02/21/2016"
                         });
                 });
@@ -303,6 +307,35 @@ namespace rolesDemoSSD.Migrations
                             ReviewContent = "Amazing movie. I loved it.",
                             ReviewDate = "09/03/2020"
                         });
+                });
+
+            modelBuilder.Entity("rolesDemoSSD.ViewModels.MovieVM", b =>
+                {
+                    b.Property<int>("MovieID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Distributor")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Duration")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Genre")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("MovieName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PosterSource")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ReleaseDate")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("MovieID");
+
+                    b.ToTable("MovieVM");
                 });
 
             modelBuilder.Entity("rolesDemoSSD.ViewModels.RoleVM", b =>

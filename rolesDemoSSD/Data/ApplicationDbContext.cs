@@ -31,6 +31,7 @@ namespace rolesDemoSSD.Data
         [Key]
         public int MovieID { get; set; }
         public string MovieName { get; set; }
+        public string PosterSource { get; set; }
         public string Genre { get; set; }
         public string Duration { get; set; }
         public string ReleaseDate { get; set; }
@@ -85,29 +86,29 @@ namespace rolesDemoSSD.Data
             base.OnModelCreating(modelBuilder);
 
             // Define composite primary keys.
-         /*   modelBuilder.Entity<ProduceSupplier>()
-                .HasKey(ps => new { ps.ProduceID, ps.SupplierID });
+            /*   modelBuilder.Entity<ProduceSupplier>()
+                   .HasKey(ps => new { ps.ProduceID, ps.SupplierID });
 
-            // Define foreign keys here. Do not use foreign key annotations.
-            modelBuilder.Entity<ProduceSupplier>()
-                .HasOne(p => p.Produce)
-                .WithMany(p => p.ProduceSuppliers)
-                .HasForeignKey(fk => new { fk.ProduceID })
-                .OnDelete(DeleteBehavior.Restrict); // Prevent cascade delete
+               // Define foreign keys here. Do not use foreign key annotations.
+               modelBuilder.Entity<ProduceSupplier>()
+                   .HasOne(p => p.Produce)
+                   .WithMany(p => p.ProduceSuppliers)
+                   .HasForeignKey(fk => new { fk.ProduceID })
+                   .OnDelete(DeleteBehavior.Restrict); // Prevent cascade delete
 
-            modelBuilder.Entity<ProduceSupplier>()
-                .HasOne(p => p.Supplier)
-                .WithMany(p => p.ProduceSuppliers)
-                .HasForeignKey(fk => new { fk.SupplierID })
-                .OnDelete(DeleteBehavior.Restrict); // Prevent cascade delete*/
-            
-            
+               modelBuilder.Entity<ProduceSupplier>()
+                   .HasOne(p => p.Supplier)
+                   .WithMany(p => p.ProduceSuppliers)
+                   .HasForeignKey(fk => new { fk.SupplierID })
+                   .OnDelete(DeleteBehavior.Restrict); // Prevent cascade delete*/
+
+
             modelBuilder.Entity<Movie>().HasData(
-                new Movie 
-                { 
-                    MovieID = 1, MovieName = "Deadpool", 
-                    Genre="Action/Adventure", Duration= "190 Minutes", 
-                    ReleaseDate= "02/21/2016", Distributor = "20th Century Fox"
+                new Movie
+                {
+                    MovieID = 1, MovieName = "Deadpool", PosterSource = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQdFU5DLFLwDFTzE_85beWRTBRmKUuVCzUcnxjgDE_YWqMwncEx",
+                    Genre = "Action/Adventure", Duration = "190 Minutes",
+                    ReleaseDate = "02/21/2016", Distributor = "20th Century Fox"
                 });
 
             modelBuilder.Entity<Review>().HasData(

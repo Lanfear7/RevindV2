@@ -16,6 +16,9 @@
                 @Html.DisplayNameFor(model => model.MovieName)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.PosterSource)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Genre)
             </th>
             <th>
@@ -35,6 +38,12 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.MovieName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PosterSource)
+                <figure>
+                    <img src="<%=@item.PosterSource%>" />
+                </figure>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Genre)

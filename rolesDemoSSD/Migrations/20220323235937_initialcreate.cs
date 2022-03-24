@@ -53,6 +53,7 @@ namespace rolesDemoSSD.Migrations
                     MovieID = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     MovieName = table.Column<string>(type: "TEXT", nullable: true),
+                    PosterSource = table.Column<string>(type: "TEXT", nullable: true),
                     Genre = table.Column<string>(type: "TEXT", nullable: true),
                     Duration = table.Column<string>(type: "TEXT", nullable: true),
                     ReleaseDate = table.Column<string>(type: "TEXT", nullable: true),
@@ -61,6 +62,24 @@ namespace rolesDemoSSD.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Movies", x => x.MovieID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MovieVM",
+                columns: table => new
+                {
+                    MovieID = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    MovieName = table.Column<string>(type: "TEXT", nullable: true),
+                    PosterSource = table.Column<string>(type: "TEXT", nullable: true),
+                    Genre = table.Column<string>(type: "TEXT", nullable: true),
+                    Duration = table.Column<string>(type: "TEXT", nullable: true),
+                    ReleaseDate = table.Column<string>(type: "TEXT", nullable: true),
+                    Distributor = table.Column<string>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MovieVM", x => x.MovieID);
                 });
 
             migrationBuilder.CreateTable(
@@ -239,8 +258,8 @@ namespace rolesDemoSSD.Migrations
 
             migrationBuilder.InsertData(
                 table: "Movies",
-                columns: new[] { "MovieID", "Distributor", "Duration", "Genre", "MovieName", "ReleaseDate" },
-                values: new object[] { 1, "20th Century Fox", "190 Minutes", "Action/Adventure", "Deadpool", "02/21/2016" });
+                columns: new[] { "MovieID", "Distributor", "Duration", "Genre", "MovieName", "PosterSource", "ReleaseDate" },
+                values: new object[] { 1, "20th Century Fox", "190 Minutes", "Action/Adventure", "Deadpool", "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQdFU5DLFLwDFTzE_85beWRTBRmKUuVCzUcnxjgDE_YWqMwncEx", "02/21/2016" });
 
             migrationBuilder.InsertData(
                 table: "Reviews",
@@ -304,6 +323,9 @@ namespace rolesDemoSSD.Migrations
 
             migrationBuilder.DropTable(
                 name: "Movies");
+
+            migrationBuilder.DropTable(
+                name: "MovieVM");
 
             migrationBuilder.DropTable(
                 name: "MyRegisteredUsers");
