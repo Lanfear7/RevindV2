@@ -27,10 +27,12 @@ namespace rolesDemoSSD.Controllers
             return View(query);
         }
 
-        public IActionResult GetMovieById(int movieID)
+        public IActionResult GetMovieById(int id)
         {
+            //_logger.LogInformation("movieid= " + typeof(MovieID));
+            /* _logger.LogInformation("movieid= " + typeof(movie.MovieID));*/
             MovieRepo movieRepo = new MovieRepo(_context);
-            MovieVM movieVM = movieRepo.GetMovieById(movieID);
+            MovieVM movieVM = movieRepo.GetMovieById(id);
             return View(movieVM);
         }
 

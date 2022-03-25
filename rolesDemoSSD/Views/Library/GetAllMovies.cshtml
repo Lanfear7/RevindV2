@@ -2,13 +2,31 @@
 
 @{
     ViewData["Title"] = "GetAllMovies";
-}
+   var movies = Model.ToList();
+   var movie = movies[0];
+} 
 
 <h1>GetAllMovies</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+<div class="row">
+    <div class="col-md-4">
+        <div class="row">
+            <div class="col-md-4">
+
+
+                <form method="post" enctype="multipart/form-data" asp-controller="Library" asp-action="GetMovieById">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input asp-for="@movie.MovieID" type="hidden" />
+                    <button type="submit" class="btn btn-primary">Reset</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <table class="table">
     <thead>
         <tr>
@@ -37,36 +55,47 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.MovieID)
-            </td>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.MovieID)*@  sssss
+                   @* @Html.HiddenFor(item.MovieID)*@
+                </td>
 
-            <td>
-                
-                <figure>
-                    <img src="@Html.DisplayFor(modelItem => item.PosterSource)"/>
-                </figure>
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Genre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Duration)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReleaseDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Distributor)
-            </td>
-            <td>
-              @*  <a asp-action="Edit" asp-route-id="@item.MovieID">Edit</a> |*@
-                <a asp-action="GetMovieById" asp-route-id="@item.MovieID">Details</a> |
-               @* <a asp-action="Delete" asp-route-id="@item.MovieID">Delete</a>*@
-            </td>
-        </tr>
-}
+                <td>
+
+                    <figure>
+                        <img src="@Html.DisplayFor(modelItem => item.PosterSource)" />
+                    </figure>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Duration)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReleaseDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Distributor)
+                </td>
+                <td>
+                    @*  <a asp-action="Edit" asp-route-id="@item.MovieID">Edit</a> |*@
+
+                    <a asp-action="GetMovieById" asp-route-id="@item.MovieID">Details</a>
+
+
+                    @Html.DisplayFor(modelItem => item.MovieID)
+                    <form method="post" enctype="multipart/form-data" asp-controller="Library" asp-action="GetMovieById">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <input asp-for="@item.MovieID" type="hidden" />
+                        <button type="submit" class="btn btn-primary">Reset</button>
+                    </form>
+                    @* <a asp-action="Delete" asp-route-id="@item.MovieID">Delete</a>*@
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
