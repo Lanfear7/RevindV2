@@ -2,8 +2,7 @@
 
 @{
     ViewData["Title"] = "GetAllMovies";
-   var movies = Model.ToList();
-   var movie = movies[0];
+
 } 
 
 <h1>GetAllMovies</h1>
@@ -11,7 +10,7 @@
 <p>
     <a asp-action="CreateMovie">Create New</a>
 </p>
-<div class="row">
+@*<div class="row">
     <div class="col-md-4">
         <div class="row">
             <div class="col-md-4">
@@ -25,7 +24,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>*@
 
 <table class="table">
     <thead>
@@ -59,12 +58,10 @@
         {
             <tr>
                 <td>
-                    @*@Html.DisplayFor(modelItem => item.MovieID)*@  
-                   @* @Html.HiddenFor(item.MovieID)*@
+                    @Html.DisplayFor(modelItem => item.MovieName)  
                 </td>
 
                 <td>
-
                     <figure>
                         <img src="@Html.DisplayFor(modelItem => item.PosterSource)" />
                     </figure>
@@ -82,18 +79,16 @@
                     @Html.DisplayFor(modelItem => item.Distributor)
                 </td>
                 <td>
-                    @*  <a asp-action="Edit" asp-route-id="@item.MovieID">Edit</a> |*@
-
                     <a asp-action="GetMovieById" asp-route-id="@item.MovieID">Details</a>
 
+                    @if (User.IsInRole("Admin"))
+                    {
+                        @*  <a asp-action="Edit" asp-route-id="@item.MovieID">Edit</a> |*@
+                        <a asp-action="DeleteMovie" asp-route-id="@item.MovieID">Delete</a>
 
-                    @Html.DisplayFor(modelItem => item.MovieID)
-                    <form method="post" enctype="multipart/form-data" asp-controller="Library" asp-action="GetMovieById">
-                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        <input asp-for="@item.MovieID" type="hidden" />
-                        <button type="submit" class="btn btn-primary">Reset</button>
-                    </form>
-                     <a asp-action="DeleteMovie" asp-route-id="@item.MovieID">Delete</a>
+                    }
+
+
                 </td>
             </tr>
         }
