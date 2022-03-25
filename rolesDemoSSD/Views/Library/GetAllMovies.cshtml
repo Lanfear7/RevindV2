@@ -44,9 +44,9 @@
             </td>
 
             <td>
-                @Html.DisplayFor(modelItem => item.PosterSource)
+                
                 <figure>
-                    <img src="<%=@item.PosterSource%>" />
+                    <img src="@Html.DisplayFor(modelItem => item.PosterSource)"/>
                 </figure>
             </td>
             <td>

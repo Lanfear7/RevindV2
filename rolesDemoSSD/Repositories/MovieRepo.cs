@@ -22,6 +22,7 @@ namespace rolesDemoSSD.Repositories
                         {
                             MovieID = m.MovieID,
                             MovieName = m.MovieName,
+                            PosterSource = m.PosterSource,
                             Genre = m.Genre,
                             Duration = m.Duration,
                             ReleaseDate = m.ReleaseDate,
