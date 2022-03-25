@@ -1,13 +1,13 @@
 ﻿@model rolesDemoSSD.ViewModels.MovieVM
 
 @{
-    ViewData["Title"] = "GetMovieById";
+    ViewData["Title"] = "Movie Library - Rewind";
 }
 
-<h1>GetMovieById</h1>
+<h1>@Html.DisplayFor(model=> model.MovieName)</h1>
 
 <div>
-    <h4>MovieVM</h4>
+    <h4>@Html.DisplayFor(model => model.MovieName) Details</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -53,6 +53,9 @@
             @Html.DisplayFor(model => model.Distributor)
         </dd>
     </dl>
+</div>
+<div>
+    @*form for reviews*@
 </div>
 <div>
 @*    <a asp-action="Edit" asp-route-id="@Model.MovieID">Edit</a> |

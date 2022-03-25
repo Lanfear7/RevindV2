@@ -56,6 +56,7 @@ namespace rolesDemoSSD.Data
         [Display(Name = "Email")]
         [Required]
         public string Email { get; set; }
+   
     }
 
     public class ApplicationDbContext : IdentityDbContext

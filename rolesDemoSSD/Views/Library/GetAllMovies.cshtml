@@ -1,96 +1,84 @@
 ﻿@model IEnumerable<rolesDemoSSD.ViewModels.MovieVM>
 
 @{
-    ViewData["Title"] = "GetAllMovies";
+    ViewData["Title"] = "Movie Library - Rewind";
 
-} 
+}
 
-<h1>GetAllMovies</h1>
+<h1>Movie Library</h1>
 
-<p>
-    <a asp-action="CreateMovie">Create New</a>
-</p>
-@*<div class="row">
-    <div class="col-md-4">
-        <div class="row">
-            <div class="col-md-4">
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        <a asp-action="CreateMovie">Create New</a>
+    </p>
+}
 
-
-                <form method="post" enctype="multipart/form-data" asp-controller="Library" asp-action="GetMovieById">
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <input asp-for="@movie.MovieID" type="hidden" />
-                    <button type="submit" class="btn btn-primary">Reset</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>*@
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.MovieID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MovieName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PosterSource)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Genre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Duration)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ReleaseDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Distributor)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.MovieName)  
-                </td>
-
-                <td>
-                    <figure>
-                        <img src="@Html.DisplayFor(modelItem => item.PosterSource)" />
-                    </figure>
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Genre)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Duration)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ReleaseDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Distributor)
-                </td>
-                <td>
-                    <a asp-action="GetMovieById" asp-route-id="@item.MovieID">Details</a>
-
-                    @if (User.IsInRole("Admin"))
-                    {
-                        @*  <a asp-action="Edit" asp-route-id="@item.MovieID">Edit</a> |*@
-                        <a asp-action="DeleteMovie" asp-route-id="@item.MovieID">Delete</a>
-
-                    }
-
-
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.MovieID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MovieName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PosterSource)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Genre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Duration)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ReleaseDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Distributor)
+                </th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MovieName)
+                    </td>
+
+                    <td>
+                        <figure>
+                            <img src="@Html.DisplayFor(modelItem => item.PosterSource)" />
+                        </figure>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Genre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Duration)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ReleaseDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Distributor)
+                    </td>
+                    <td>
+                        <a asp-action="GetMovieById" asp-route-id="@item.MovieID">Details</a>
+
+                        @if (User.IsInRole("Admin"))
+                        {
+                            @*  <a asp-action="Edit" asp-route-id="@item.MovieID">Edit</a> |*@
+                            <a asp-action="DeleteMovie" asp-route-id="@item.MovieID">Delete</a>
+
+                        }
+
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
