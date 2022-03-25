@@ -36,5 +36,33 @@ namespace rolesDemoSSD.Controllers
             return View(movieVM);
         }
 
+        [HttpGet]
+        public ActionResult CreateMovie()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CreateMovie(MovieVM movieVM)
+        {
+            if (ModelState.IsValid)
+            {
+                MovieRepo movieRepo = new MovieRepo(_context);
+                var success = movieRepo.CreateMovie(movieVM.MovieName, movieVM.PosterSource, movieVM.Genre, movieVM.Duration, movieVM.ReleaseDate, movieVM.Distributor);
+                if (success)
+                {
+                    return RedirectToAction(nameof(GetAllMovies));
+                }
+            }
+            ViewBag.Error = "An error occurred while creating this movie. Please try again.";
+            return View();
+        }
+
+        public ActionResult DeleteMovie(int id)
+        {
+            MovieRepo movieRepo = new MovieRepo(_context);
+            Movie movieVM = movieRepo.DeleteMovieById(id);
+            return RedirectToAction(nameof(GetAllMovies));
+        }
     }
 }

@@ -9,7 +9,7 @@
 <h1>GetAllMovies</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="CreateMovie">Create New</a>
 </p>
 <div class="row">
     <div class="col-md-4">
@@ -59,7 +59,7 @@
         {
             <tr>
                 <td>
-                    @*@Html.DisplayFor(modelItem => item.MovieID)*@  sssss
+                    @*@Html.DisplayFor(modelItem => item.MovieID)*@  
                    @* @Html.HiddenFor(item.MovieID)*@
                 </td>
 
@@ -93,7 +93,7 @@
                         <input asp-for="@item.MovieID" type="hidden" />
                         <button type="submit" class="btn btn-primary">Reset</button>
                     </form>
-                    @* <a asp-action="Delete" asp-route-id="@item.MovieID">Delete</a>*@
+                     <a asp-action="DeleteMovie" asp-route-id="@item.MovieID">Delete</a>
                 </td>
             </tr>
         }

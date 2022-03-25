@@ -39,6 +39,35 @@ namespace rolesDemoSSD.Repositories
                 .FirstOrDefault();
             return query;
         }
-      
+
+        public bool CreateMovie(string movieName, string posterSource, string genre, string duration, string releaseDate, string distributor)
+        {
+            /*var role = GetMovieById(movieName);
+            if (role != null)
+            {
+                return false;
+            }*/
+            db.Movies.Add(new Movie
+            {
+                MovieName = movieName,
+                PosterSource = posterSource,
+                Genre = genre,
+                Duration = duration,
+                ReleaseDate = releaseDate,
+                Distributor = distributor
+            });
+            db.SaveChanges();
+            return true;
+        }
+
+
+        public Movie DeleteMovieById(int id)
+        {
+            var query = db.Movies.FirstOrDefault(mv => mv.MovieID == id);
+            db.Remove(query);
+            db.SaveChanges();
+            return query;
+        }
+
     }
 }
