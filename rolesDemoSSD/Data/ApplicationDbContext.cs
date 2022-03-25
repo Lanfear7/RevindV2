@@ -85,28 +85,28 @@ namespace rolesDemoSSD.Data
             // to the base class is also needed at the start of the method.
             base.OnModelCreating(modelBuilder);
 
-            // Define composite primary keys.
-            /*   modelBuilder.Entity<ProduceSupplier>()
-                   .HasKey(ps => new { ps.ProduceID, ps.SupplierID });
+     /*       // Define composite primary keys.
+            modelBuilder.Entity<ProduceSupplier>()
+                .HasKey(ps => new { ps.ProduceID, ps.SupplierID });
 
-               // Define foreign keys here. Do not use foreign key annotations.
-               modelBuilder.Entity<ProduceSupplier>()
-                   .HasOne(p => p.Produce)
-                   .WithMany(p => p.ProduceSuppliers)
-                   .HasForeignKey(fk => new { fk.ProduceID })
-                   .OnDelete(DeleteBehavior.Restrict); // Prevent cascade delete
+            // Define foreign keys here. Do not use foreign key annotations.
+            modelBuilder.Entity<ProduceSupplier>()
+                .HasOne(p => p.Produce)
+                .WithMany(p => p.ProduceSuppliers)
+                .HasForeignKey(fk => new { fk.ProduceID })
+                .OnDelete(DeleteBehavior.Restrict); // Prevent cascade delete
 
-               modelBuilder.Entity<ProduceSupplier>()
-                   .HasOne(p => p.Supplier)
-                   .WithMany(p => p.ProduceSuppliers)
-                   .HasForeignKey(fk => new { fk.SupplierID })
-                   .OnDelete(DeleteBehavior.Restrict); // Prevent cascade delete*/
+            modelBuilder.Entity<ProduceSupplier>()
+                .HasOne(p => p.Supplier)
+                .WithMany(p => p.ProduceSuppliers)
+                .HasForeignKey(fk => new { fk.SupplierID })
+                .OnDelete(DeleteBehavior.Restrict); // Prevent cascade delete*/
 
 
             modelBuilder.Entity<Movie>().HasData(
                 new Movie
-                {
-                    MovieID = 1, MovieName = "Deadpool", PosterSource = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQdFU5DLFLwDFTzE_85beWRTBRmKUuVCzUcnxjgDE_YWqMwncEx",
+                {   MovieID = 1,
+                    MovieName = "Deadpool", PosterSource = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQdFU5DLFLwDFTzE_85beWRTBRmKUuVCzUcnxjgDE_YWqMwncEx",
                     Genre = "Action/Adventure", Duration = "190 Minutes",
                     ReleaseDate = "02/21/2016", Distributor = "20th Century Fox"
                 });

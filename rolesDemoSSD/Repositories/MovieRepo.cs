@@ -20,6 +20,7 @@ namespace rolesDemoSSD.Repositories
             var query = from m in db.Movies
                         select new MovieVM()
                         {
+                            MovieID = m.MovieID,
                             MovieName = m.MovieName,
                             Genre = m.Genre,
                             Duration = m.Duration,
@@ -28,6 +29,14 @@ namespace rolesDemoSSD.Repositories
                         };
             return query;
                             
+        }
+
+        public MovieVM GetMovieById(int movieID)
+        {
+            var query = GetAllMovies()
+                .Where(mv => mv.MovieID == movieID)
+                .FirstOrDefault();
+            return query;
         }
       
     }

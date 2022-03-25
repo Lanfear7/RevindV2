@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using rolesDemoSSD.Data;
 using rolesDemoSSD.Repositories;
+using rolesDemoSSD.ViewModels;
 
 namespace rolesDemoSSD.Controllers
 {
@@ -25,7 +26,13 @@ namespace rolesDemoSSD.Controllers
             var query = movieRepo.GetAllMovies();
             return View(query);
         }
-        //public IActionResult GetMovieById() { }
-       
+
+        public IActionResult GetMovieById(int movieID)
+        {
+            MovieRepo movieRepo = new MovieRepo(_context);
+            MovieVM movieVM = movieRepo.GetMovieById(movieID);
+            return View(movieVM);
+        }
+
     }
 }
