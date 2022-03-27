@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\stell\\OneDrive\\Desktop\\rewindLatest\\RewindV2\\rolesDemoSSD\\rolesDemoSSD.csproj": {}
+    "C:\\Users\\brenn\\OneDrive\\Desktop\\asp\\RewindV2\\rolesDemoSSD\\rolesDemoSSD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\stell\\OneDrive\\Desktop\\rewindLatest\\RewindV2\\rolesDemoSSD\\rolesDemoSSD.csproj": {
+    "C:\\Users\\brenn\\OneDrive\\Desktop\\asp\\RewindV2\\rolesDemoSSD\\rolesDemoSSD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\stell\\OneDrive\\Desktop\\rewindLatest\\RewindV2\\rolesDemoSSD\\rolesDemoSSD.csproj",
+        "projectUniqueName": "C:\\Users\\brenn\\OneDrive\\Desktop\\asp\\RewindV2\\rolesDemoSSD\\rolesDemoSSD.csproj",
         "projectName": "rolesDemoSSD",
-        "projectPath": "C:\\Users\\stell\\OneDrive\\Desktop\\rewindLatest\\RewindV2\\rolesDemoSSD\\rolesDemoSSD.csproj",
-        "packagesPath": "C:\\Users\\stell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\stell\\OneDrive\\Desktop\\rewindLatest\\RewindV2\\rolesDemoSSD\\obj\\",
+        "projectPath": "C:\\Users\\brenn\\OneDrive\\Desktop\\asp\\RewindV2\\rolesDemoSSD\\rolesDemoSSD.csproj",
+        "packagesPath": "C:\\Users\\brenn\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\brenn\\OneDrive\\Desktop\\asp\\RewindV2\\rolesDemoSSD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\stell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\brenn\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -97,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

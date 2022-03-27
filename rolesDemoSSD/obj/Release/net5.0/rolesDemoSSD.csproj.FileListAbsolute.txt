@@ -2293,3 +2293,4 @@ C:\Users\stell\OneDrive\Desktop\rewindLatest\RewindV2\rolesDemoSSD\obj\Release\n
 C:\Users\stell\OneDrive\Desktop\rewindLatest\RewindV2\rolesDemoSSD\obj\Release\net5.0\ref\rolesDemoSSD.dll
 C:\Users\stell\OneDrive\Desktop\rewindLatest\RewindV2\rolesDemoSSD\obj\Release\net5.0\rolesDemoSSD.pdb
 C:\Users\stell\OneDrive\Desktop\rewindLatest\RewindV2\rolesDemoSSD\obj\Release\net5.0\rolesDemoSSD.genruntimeconfig.cache
+C:\Users\brenn\OneDrive\Desktop\asp\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Library\CreateMovie.cshtml.g.cs

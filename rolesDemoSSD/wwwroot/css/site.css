@@ -98,14 +98,30 @@ main{
     width: 35%;
     text-align: center;
 }
-
+/*********-------------------Library page---------------*********/
+.LibraryContainer{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.MovieCard{
+    flex-basis: 25%;
+    padding:5px;
+}
+.MovieTitle{
+    text-align:center;
+}
+.ImgContainer {
+    margin: 0%;
+    text-align: center;
+}
 /*********-------------------Login page---------------*********/
-.thirdParty{
+.thirdParty {
     border: none;
     color: white;
     width: 200px;
     height: 30px;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     border-radius: 5px;
 }
 .facebook {
