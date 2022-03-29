@@ -56,7 +56,12 @@ namespace rolesDemoSSD.Data
         [Display(Name = "Email")]
         [Required]
         public string Email { get; set; }
-   
+        [Display(Name = "Address")]
+        [Required]
+        public string Address { get; set; }
+
+
+
     }
 
     public class ApplicationDbContext : IdentityDbContext

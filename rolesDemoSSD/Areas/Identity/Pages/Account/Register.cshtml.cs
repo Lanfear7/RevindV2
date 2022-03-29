@@ -63,6 +63,19 @@ namespace rolesDemoSSD.Areas.Identity.Pages.Account
             [Display(Name = "Last Name")]
             public string LastName { get; set; }
 
+            [Required]
+            [Display(Name = "Home Address")]
+            public string HomeAddress { get; set; }
+            [Required]
+            [Display(Name = "Postal Code")]
+            public string PostalCode { get; set; }
+
+            [Required]
+            [Display(Name = "City")]
+            public string City { get; set; }
+            [Required]
+            [Display(Name = "Province")]
+            public string Province { get; set; }
 
             [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
@@ -97,6 +110,7 @@ namespace rolesDemoSSD.Areas.Identity.Pages.Account
                     MyRegisteredUser registerUser = new MyRegisteredUser()
                     {
                         Email = Input.Email,
+                        Address = Input.HomeAddress+Input.PostalCode+Input.City+ Input.Province,
                         FirstName = Input.FirstName
                     };
                     _context.MyRegisteredUsers.Add(registerUser);
