@@ -1,54 +1,62 @@
 ﻿/*****---------------TYPOGRAPHY-------------*******/
-a, h1, h2, h3, h4, h5, p{
+a, h1, h2, h3, h4, h5, p {
     color: white;
 }
+
 h1, h2, h3, h4, h5 {
     font-family: 'Noto Serif', serif;
     line-height: 1.4;
     font-weight: 700;
 }
+
 a, p, span, li {
     font-family: 'Roboto', sans-serif;
     line-height: 1.2;
 }
-h1{
+
+h1 {
     font-size: 40px;
 }
-h2{
+
+h2 {
     font-size: 35px;
 }
-html {
-  position: relative;
-  margin: auto;
 
+html {
+    position: relative;
+    margin: auto;
 }
+
 th, td {
     color: snow;
 }
-.container{
-    max-width: 1300px;
 
+.container {
+    max-width: 1300px;
 }
+
 body {
-  background: url(../images/bg.jpg)
+    background: url(../images/bg.jpg)
 }
 
 
 /*******------------------NAVIGATION---------------*******/
-nav .container{
+nav .container {
     display: flex;
     justify-content: space-between;
 }
-.navbar-nav{
+
+.navbar-nav {
     justify-content: end;
 }
-.navbar-brand img{
+
+.navbar-brand img {
     width: 150px;
 }
 
 
 /*********-------------------Home page---------------*********/
-.home-banner{
+.home-banner {
     max-width: 400px;
     min-height: 500px;
     display: flex;
@@ -60,37 +68,45 @@ nav .container{
 }
 
 /*********-------------------Create Account page---------------*********/
-main{
+main {
     margin-top: 70px;
 }
-.row{
+
+.row {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.col-md-4{
+
+.col-md-4 {
     width: 100%
 }
-.RegisterFrom{
+
+.RegisterFrom {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     height: 60vh;
 }
-.text-danger{
-    flex-basis:100%;
+
+.text-danger {
+    flex-basis: 100%;
 }
-.form-group{
+
+.form-group {
     flex-basis: 100%
 }
-.half{
+
+.half {
     flex-basis: 49%;
 }
-.PrivatePolicy p{
+
+.PrivatePolicy p {
     display: inline;
 }
+
 .btn {
     height: 50px;
     background-color: #04c796;
@@ -99,21 +115,29 @@ main{
     text-align: center;
 }
 /*********-------------------Library page---------------*********/
-.LibraryContainer{
-    display:flex;
+.LibraryContainer {
+    display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    min-height: 70vh;
 }
-.MovieCard{
+
+.MovieCard {
     flex-basis: 25%;
-    padding:5px;
+    padding: 5px;
 }
-.MovieTitle{
-    text-align:center;
+
+.MovieTitle {
+    text-align: center;
 }
+
 .ImgContainer {
     margin: 0%;
     text-align: center;
+}
+
+.MovieCardHidden {
+    display: none
 }
 /*********-------------------Login page---------------*********/
 .thirdParty {
@@ -124,27 +148,32 @@ main{
     margin-bottom: 10px;
     border-radius: 5px;
 }
+
 .facebook {
     background-color: blue;
 }
-.signin{
+
+.signin {
     display: flex;
     justify-content: center;
 }
+
 .google {
     background-color: red;
 }
-.OtherLogin{
-    
+
+.OtherLogin {
     display: flex;
     flex-wrap: wrap;
     justify-content: center
 }
-.OtherLogin p{
-    flex-basis: 100%;
-    text-align: center;
-}
-.checkbox label{
+
+    .OtherLogin p {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+.checkbox label {
     color: white;
 }
 
