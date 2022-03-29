@@ -2512,7 +2512,6 @@ C:\Users\stell\OneDrive\Desktop\rewindmar27\rolesDemoSSD\obj\Release\net5.0\Razo
 C:\Users\stell\OneDrive\Desktop\rewindmar27\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\stell\OneDrive\Desktop\rewindmar27\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
 C:\Users\stell\OneDrive\Desktop\rewindmar27\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\stell\OneDrive\Desktop\rewindmar27\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Social\Social.cshtml.g.cs
 C:\Users\stell\OneDrive\Desktop\rewindmar27\rolesDemoSSD\obj\Release\net5.0\Razor\Views\UserRole\Create.cshtml.g.cs
 C:\Users\stell\OneDrive\Desktop\rewindmar27\rolesDemoSSD\obj\Release\net5.0\Razor\Views\UserRole\Detail.cshtml.g.cs
 C:\Users\stell\OneDrive\Desktop\rewindmar27\rolesDemoSSD\obj\Release\net5.0\Razor\Views\UserRole\Index.cshtml.g.cs
@@ -2526,3 +2525,4 @@ C:\Users\stell\OneDrive\Desktop\rewindmar27\rolesDemoSSD\obj\Release\net5.0\role
 C:\Users\stell\OneDrive\Desktop\rewindmar27\rolesDemoSSD\obj\Release\net5.0\ref\rolesDemoSSD.dll
 C:\Users\stell\OneDrive\Desktop\rewindmar27\rolesDemoSSD\obj\Release\net5.0\rolesDemoSSD.pdb
 C:\Users\stell\OneDrive\Desktop\rewindmar27\rolesDemoSSD\obj\Release\net5.0\rolesDemoSSD.genruntimeconfig.cache
+C:\Users\stell\OneDrive\Desktop\rewindmar27\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Home\About.cshtml.g.cs
