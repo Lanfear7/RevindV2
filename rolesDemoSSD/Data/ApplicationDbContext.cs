@@ -13,17 +13,19 @@ namespace rolesDemoSSD.Data
     {
         [Key]
         public int ReviewID { get; set; }
+        public MovieVM MovieID { get; set; }
+        public UserVM Email { get; set; }
         public string ReviewContent { get; set; }
         public string ReviewDate { get; set; }
         public int Rating { get; set; }
         public string RatingDate { get; set; }
         public int Flag { get; set; }
-        
-   /*     // Navigation properties.
-        // Child.        
-        public virtual ICollection<ProduceSupplier>
-            ProduceSuppliers
-        { get; set; }*/
+
+        /*     // Navigation properties.
+             // Child.        
+             public virtual ICollection<ProduceSupplier>
+                 ProduceSuppliers
+             { get; set; }*/
     }
 
     public class Movie
