@@ -60,7 +60,12 @@ namespace rolesDemoSSD.Repositories
             return true;
         }
 
+        public Movie EditMovieById(int id)
+        {
+            var query = db.Movies.FirstOrDefault(mv => mv.MovieID == id);
 
+            return query;
+        }
         public Movie DeleteMovieById(int id)
         {
             var query = db.Movies.FirstOrDefault(mv => mv.MovieID == id);

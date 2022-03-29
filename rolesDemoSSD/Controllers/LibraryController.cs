@@ -57,6 +57,12 @@ namespace rolesDemoSSD.Controllers
             ViewBag.Error = "An error occurred while creating this movie. Please try again.";
             return View();
         }
+        public ActionResult EditMovie(int id)
+        {
+            MovieRepo movieRepo = new MovieRepo(_context);
+            Movie movieVM = movieRepo.EditMovieById(id);
+            return View();
+        }
 
         public ActionResult DeleteMovie(int id)
         {
