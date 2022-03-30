@@ -25,19 +25,23 @@
         </div>
 
         <div class="MovieCardHidden">
-            <h3 class="MovieTitle">@Html.DisplayFor(modelItem => item.MovieName)</h3>
-            <button class="CloseBtn">X</button>
-            <h3>Genre - <h5>@Html.DisplayFor(modelItem => item.Genre)</h5></h3>
-            <h3>Duration - <h5>@Html.DisplayFor(modelItem => item.Duration)</h5></h3>
-            <h3>ReleaseDate - <h5>@Html.DisplayFor(modelItem => item.ReleaseDate)</h5></h3>
-            <h3>Distributor - <h5>@Html.DisplayFor(modelItem => item.Distributor)</h5></h3>
-            <button>Rent movie now</button>
-            @if (User.IsInRole("Admin"))
+            <div class="HiddenContent">
+                <h3 class="MovieTitle">@Html.DisplayFor(modelItem => item.MovieName)</h3>
+                <button class="CloseBtn">X</button>
+                <h3 class="Content">Genre</h3><h5 class="Genre Item">@Html.DisplayFor(modelItem => item.Genre)</h5>
+                <h3 class="Content">Duration<h5 class="Duration Item">@Html.DisplayFor(modelItem => item.Duration)</h5></h3>
+                <h3 class="Content">ReleaseDate<h5 class="ReleaseDate Item">@Html.DisplayFor(modelItem => item.ReleaseDate)</h5></h3>
+                <h3 class="Content">Distributor<h5 class="Distributor Item">@Html.DisplayFor(modelItem => item.Distributor)</h5></h3>
+                <div class="BtnHolder">
+                    <button>Rent movie now</button>
+                </div>
+                @if (User.IsInRole("Admin"))
                 {
                     <a asp-action="Edit" asp-route-id="@item.MovieID">Edit</a>
                     <a asp-action="DeleteMovie" asp-route-id="@item.MovieID">Delete</a>
 
                 }
+            </div>
         </div>
     }
 </div>

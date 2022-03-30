@@ -8,10 +8,8 @@ let hiddenPosterCardArr = document.querySelectorAll(".MovieCardHidden")
 let colseBtnArr = document.querySelectorAll('.CloseBtn')
 posterCardArr.forEach((card, i) => {
     card.addEventListener('click', () => {
-        console.log('clicked', hiddenPosterCardArr[i])
-        if (hiddenPosterCardArr[i].style.display != "block") {
-            console.log('in', hiddenPosterCardArr[i])
-            hiddenPosterCardArr[i].style.display = "block"
+        if (hiddenPosterCardArr[i].style.display != "flex") {
+            hiddenPosterCardArr[i].style.display = "flex"
         }
 
 
@@ -20,12 +18,10 @@ posterCardArr.forEach((card, i) => {
 
 colseBtnArr.forEach((item, i) => {
     item.addEventListener('click', () => {
-        console.log('clicked', hiddenPosterCardArr[i])
-        if (hiddenPosterCardArr[i].style.display == "block") {
-            console.log('in', hiddenPosterCardArr[i])
+        if (hiddenPosterCardArr[i].style.display == "flex") {
             hiddenPosterCardArr[i].style.display = "none"
         } else {
-            hiddenPosterCardArr[i].style.display = "block"
+            hiddenPosterCardArr[i].style.display = "flex"
         }
     })
 })
