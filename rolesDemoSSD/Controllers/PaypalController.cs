@@ -17,7 +17,7 @@ namespace rolesDemoSSD.Controllers
             this._context = context;
         }
 
-        /*// Home page shows list of items. Item price is set through ViewBag.
+        // Home page shows list of items. Item price is set through ViewBag.
         public IActionResult Index()
         {
             ViewBag.TotalPrice = "3.55";
@@ -46,7 +46,7 @@ namespace rolesDemoSSD.Controllers
         {
             IPN transaction = _context.IPNs.Where(t => t.paymentID == paymentID).FirstOrDefault();
             return View(transaction);
-        }*/
+        }
 
     }
 }

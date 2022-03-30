@@ -9,8 +9,8 @@ using rolesDemoSSD.Data;
 namespace rolesDemoSSD.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220329175430_initialcreate")]
-    partial class initialcreate
+    [Migration("20220330222408_initialCreate")]
+    partial class initialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -214,6 +214,61 @@ namespace rolesDemoSSD.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("rolesDemoSSD.Data.IPN", b =>
+                {
+                    b.Property<string>("paymentID")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("amount")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("cart")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("create_time")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("currency")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("custom")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("intent")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("payerCountryCode")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("payerEmail")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("payerFirstName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("payerID")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("payerLastName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("payerMiddleName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("payerStatus")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("paymentMethod")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("paymentState")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("paymentID");
+
+                    b.ToTable("IPNs");
+                });
+
             modelBuilder.Entity("rolesDemoSSD.Data.Movie", b =>
                 {
                     b.Property<int>("MovieID")
@@ -284,7 +339,13 @@ namespace rolesDemoSSD.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Email1")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("Flag")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("MovieID1")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("Rating")
@@ -300,6 +361,10 @@ namespace rolesDemoSSD.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasKey("ReviewID");
+
+                    b.HasIndex("Email1");
+
+                    b.HasIndex("MovieID1");
 
                     b.ToTable("Reviews");
 
@@ -436,6 +501,21 @@ namespace rolesDemoSSD.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("rolesDemoSSD.Data.Review", b =>
+                {
+                    b.HasOne("rolesDemoSSD.ViewModels.UserVM", "Email")
+                        .WithMany()
+                        .HasForeignKey("Email1");
+
+                    b.HasOne("rolesDemoSSD.ViewModels.MovieVM", "MovieID")
+                        .WithMany()
+                        .HasForeignKey("MovieID1");
+
+                    b.Navigation("Email");
+
+                    b.Navigation("MovieID");
                 });
 #pragma warning restore 612, 618
         }

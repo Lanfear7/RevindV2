@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace rolesDemoSSD.Migrations
 {
-    public partial class initialcreate : Migration
+    public partial class initialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -44,6 +44,32 @@ namespace rolesDemoSSD.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "IPNs",
+                columns: table => new
+                {
+                    paymentID = table.Column<string>(type: "TEXT", nullable: false),
+                    custom = table.Column<string>(type: "TEXT", nullable: true),
+                    cart = table.Column<string>(type: "TEXT", nullable: true),
+                    create_time = table.Column<string>(type: "TEXT", nullable: true),
+                    payerID = table.Column<string>(type: "TEXT", nullable: true),
+                    payerFirstName = table.Column<string>(type: "TEXT", nullable: true),
+                    payerLastName = table.Column<string>(type: "TEXT", nullable: true),
+                    payerMiddleName = table.Column<string>(type: "TEXT", nullable: true),
+                    payerEmail = table.Column<string>(type: "TEXT", nullable: true),
+                    payerCountryCode = table.Column<string>(type: "TEXT", nullable: true),
+                    payerStatus = table.Column<string>(type: "TEXT", nullable: true),
+                    amount = table.Column<string>(type: "TEXT", nullable: true),
+                    currency = table.Column<string>(type: "TEXT", nullable: true),
+                    intent = table.Column<string>(type: "TEXT", nullable: true),
+                    paymentMethod = table.Column<string>(type: "TEXT", nullable: true),
+                    paymentState = table.Column<string>(type: "TEXT", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_IPNs", x => x.paymentID);
                 });
 
             migrationBuilder.CreateTable(
@@ -95,23 +121,6 @@ namespace rolesDemoSSD.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_MyRegisteredUsers", x => x.ID);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Reviews",
-                columns: table => new
-                {
-                    ReviewID = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    ReviewContent = table.Column<string>(type: "TEXT", nullable: true),
-                    ReviewDate = table.Column<string>(type: "TEXT", nullable: true),
-                    Rating = table.Column<int>(type: "INTEGER", nullable: false),
-                    RatingDate = table.Column<string>(type: "TEXT", nullable: true),
-                    Flag = table.Column<int>(type: "INTEGER", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Reviews", x => x.ReviewID);
                 });
 
             migrationBuilder.CreateTable(
@@ -257,6 +266,37 @@ namespace rolesDemoSSD.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Reviews",
+                columns: table => new
+                {
+                    ReviewID = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    MovieID1 = table.Column<int>(type: "INTEGER", nullable: true),
+                    Email1 = table.Column<string>(type: "TEXT", nullable: true),
+                    ReviewContent = table.Column<string>(type: "TEXT", nullable: true),
+                    ReviewDate = table.Column<string>(type: "TEXT", nullable: true),
+                    Rating = table.Column<int>(type: "INTEGER", nullable: false),
+                    RatingDate = table.Column<string>(type: "TEXT", nullable: true),
+                    Flag = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Reviews", x => x.ReviewID);
+                    table.ForeignKey(
+                        name: "FK_Reviews_MovieVM_MovieID1",
+                        column: x => x.MovieID1,
+                        principalTable: "MovieVM",
+                        principalColumn: "MovieID",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Reviews_UserVM_Email1",
+                        column: x => x.Email1,
+                        principalTable: "UserVM",
+                        principalColumn: "Email",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.InsertData(
                 table: "Movies",
                 columns: new[] { "MovieID", "Distributor", "Duration", "Genre", "MovieName", "PosterSource", "ReleaseDate" },
@@ -264,8 +304,8 @@ namespace rolesDemoSSD.Migrations
 
             migrationBuilder.InsertData(
                 table: "Reviews",
-                columns: new[] { "ReviewID", "Flag", "Rating", "RatingDate", "ReviewContent", "ReviewDate" },
-                values: new object[] { 1, 1, 4, "09/03/2020", "Amazing movie. I loved it.", "09/03/2020" });
+                columns: new[] { "ReviewID", "Email1", "Flag", "MovieID1", "Rating", "RatingDate", "ReviewContent", "ReviewDate" },
+                values: new object[] { 1, null, 1, null, 4, "09/03/2020", "Amazing movie. I loved it.", "09/03/2020" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -303,6 +343,16 @@ namespace rolesDemoSSD.Migrations
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Reviews_Email1",
+                table: "Reviews",
+                column: "Email1");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Reviews_MovieID1",
+                table: "Reviews",
+                column: "MovieID1");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -323,10 +373,10 @@ namespace rolesDemoSSD.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Movies");
+                name: "IPNs");
 
             migrationBuilder.DropTable(
-                name: "MovieVM");
+                name: "Movies");
 
             migrationBuilder.DropTable(
                 name: "MyRegisteredUsers");
@@ -341,13 +391,16 @@ namespace rolesDemoSSD.Migrations
                 name: "UserRoleVM");
 
             migrationBuilder.DropTable(
-                name: "UserVM");
-
-            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "MovieVM");
+
+            migrationBuilder.DropTable(
+                name: "UserVM");
         }
     }
 }
