@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SFkLxzzstf8Q0fG+yL4t/iOQdmJD9RkcET88QRXZhtUVfp9xj7bMuccXt4IJ9c6QZZz824mutFEwiCNxqQvqPw==",
+  "dgSpecHash": "mhtplbshnVQjywEp75Lo4zrNN93cc/Jr/HPrIpDsf1ILG1Iz/nt0mp+eNhBMFKwYOosmo3R9w3KV+fm5ITZj9g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\brenn\\OneDrive\\Desktop\\idk\\RewindV2\\rolesDemoSSD\\rolesDemoSSD.csproj",
+  "projectFilePath": "C:\\Users\\brenn\\Desktop\\MainProject\\rolesDemoSSD\\rolesDemoSSD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\brenn\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\brenn\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.12\\microsoft.aspnetcore.cryptography.internal.5.0.12.nupkg.sha512",

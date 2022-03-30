@@ -26,15 +26,24 @@
 
         <div class="MovieCardHidden">
             <div class="HiddenContent">
-                <h3 class="MovieTitle">@Html.DisplayFor(modelItem => item.MovieName)</h3>
-                <button class="CloseBtn">X</button>
-                <h3 class="Content">Genre</h3><h5 class="Genre Item">@Html.DisplayFor(modelItem => item.Genre)</h5>
-                <h3 class="Content">Duration<h5 class="Duration Item">@Html.DisplayFor(modelItem => item.Duration)</h5></h3>
-                <h3 class="Content">ReleaseDate<h5 class="ReleaseDate Item">@Html.DisplayFor(modelItem => item.ReleaseDate)</h5></h3>
-                <h3 class="Content">Distributor<h5 class="Distributor Item">@Html.DisplayFor(modelItem => item.Distributor)</h5></h3>
-                <div class="BtnHolder">
-                    <button>Rent movie now</button>
+                <div class="HiddenSplit ImgSplit">
+                    <figure class="HiddenImgContainer">
+                        <img src="@Html.DisplayFor(modelItem => item.PosterSource)" />
+                    </figure>
                 </div>
+                <div class="HiddenSplit">
+                    <div class="CloseBtnContainer">
+                        <button class="CloseBtn">X</button>
+                    </div>
+                    <h3 class="MovieTitle">@Html.DisplayFor(modelItem => item.MovieName)</h3>
+                    <h3 class="Content">Genre</h3><h5 class="Genre Item">@Html.DisplayFor(modelItem => item.Genre)</h5>
+                    <h3 class="Content">Duration<h5 class="Duration Item">@Html.DisplayFor(modelItem => item.Duration)</h5></h3>
+                    <h3 class="Content">ReleaseDate<h5 class="ReleaseDate Item">@Html.DisplayFor(modelItem => item.ReleaseDate)</h5></h3>
+                    <h3 class="Content">Distributor<h5 class="Distributor Item">@Html.DisplayFor(modelItem => item.Distributor)</h5></h3>
+                    <div class="BtnHolder">
+                        <button>Rent movie now</button>
+                    </div>
+                </div> 
                 @if (User.IsInRole("Admin"))
                 {
                     <a asp-action="Edit" asp-route-id="@item.MovieID">Edit</a>

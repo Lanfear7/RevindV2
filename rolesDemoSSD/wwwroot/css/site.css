@@ -155,16 +155,33 @@ main {
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-.MovieTitle{
+.HiddenSplit{
+    flex-basis: 50%;
+}
+.ImgSplit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.HiddenImgContainer {
+    display: flex;
+    justify-content: center;
+}
+.MovieTitle {
     flex-basis: 90%;
     text-align: center;
 }
-.CloseBtn{
+.CloseBtnContainer{
+    display: flex;
+    justify-content: end;
+}
+.CloseBtn {
     background: none;
     color: red;
     border: 1px solid white;
     width: 45px;
     font-size: 24px;
+    
 }
 .CloseBtn:hover{
     transform: scale(1.1)
@@ -172,7 +189,6 @@ main {
 .Content {
     flex-basis: 50%;
     text-align: start;
-    border-bottom: solid 1px white;
 }
 .BtnHolder{
     flex-basis: 100%;
@@ -188,7 +204,7 @@ main {
 }
 .Item{
     flex-basis: 50%;
-    border-bottom: solid 1px white;
+    border-bottom: 1px solid white;
 }
 /*********-------------------Login page---------------*********/
 .thirdParty {
