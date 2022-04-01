@@ -14,26 +14,26 @@ namespace rolesDemoSSD.Repositories
         {
             db = context;
         }
-        /*public IQueryable<ApplicationDbContext> GetAllReviews()
+        public IQueryable<ReviewVM> GetAllReviews(int movieId)
         {
-            var query = from m in db.Reviews
+            var movieQuery = (from m in db.Movies
+                              where m.MovieID == movieId
+                              select m).FirstOrDefault();
+            var query = from r in db.Reviews
+                        where r.MovieID == movieQuery.MovieID
                         select new ReviewVM()
                         {
-                            MovieID = m.MovieID,
-                            MovieName = m.MovieName,
-                            PosterSource = m.PosterSource,
-                            Genre = m.Genre,
-                            Duration = m.Duration,
-                            ReleaseDate = m.ReleaseDate,
-                            Distributor = m.Distributor
+                            MovieID = movieQuery.MovieID
                         };
             return query;
 
-        }*/
+        }
         public bool CreateReview(int movieId, string email, string reviewDate, string reviewContent, int rating, string ratingDate, int flag)
         {
             db.Reviews.Add(new Review
             {
+                MovieID = movieId,
+                Email = email,
                 ReviewContent = reviewContent,
                 ReviewDate = reviewDate,
                 Rating = rating,

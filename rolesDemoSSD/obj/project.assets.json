@@ -7830,19 +7830,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Royce\\.nuget\\packages\\": {}
+    "C:\\Users\\mykel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\project\\03-30\\rolesDemoSSD\\rolesDemoSSD.csproj",
+      "projectUniqueName": "C:\\Users\\mykel\\Source\\Repos\\RewindV2\\rolesDemoSSD\\rolesDemoSSD.csproj",
       "projectName": "rolesDemoSSD",
-      "projectPath": "C:\\project\\03-30\\rolesDemoSSD\\rolesDemoSSD.csproj",
-      "packagesPath": "C:\\Users\\Royce\\.nuget\\packages\\",
-      "outputPath": "C:\\project\\03-30\\rolesDemoSSD\\obj\\",
+      "projectPath": "C:\\Users\\mykel\\Source\\Repos\\RewindV2\\rolesDemoSSD\\rolesDemoSSD.csproj",
+      "packagesPath": "C:\\Users\\mykel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mykel\\Source\\Repos\\RewindV2\\rolesDemoSSD\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Royce\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mykel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7925,7 +7925,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
