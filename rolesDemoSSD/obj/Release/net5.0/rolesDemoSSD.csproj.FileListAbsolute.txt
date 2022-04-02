@@ -2279,7 +2279,6 @@ C:\Users\stell\OneDrive\Desktop\rewindLatest\RewindV2\rolesDemoSSD\obj\Release\n
 C:\Users\stell\OneDrive\Desktop\rewindLatest\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\stell\OneDrive\Desktop\rewindLatest\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
 C:\Users\stell\OneDrive\Desktop\rewindLatest\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\stell\OneDrive\Desktop\rewindLatest\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Social\Social.cshtml.g.cs
 C:\Users\stell\OneDrive\Desktop\rewindLatest\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\UserRole\Create.cshtml.g.cs
 C:\Users\stell\OneDrive\Desktop\rewindLatest\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\UserRole\Detail.cshtml.g.cs
 C:\Users\stell\OneDrive\Desktop\rewindLatest\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\UserRole\Index.cshtml.g.cs
@@ -3688,3 +3687,6 @@ C:\project\03-30\rolesDemoSSD\obj\Release\net5.0\rolesDemoSSD.pdb
 C:\project\03-30\rolesDemoSSD\obj\Release\net5.0\rolesDemoSSD.genruntimeconfig.cache
 C:\project\03-30\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Paypal\Index.cshtml.g.cs
 C:\project\03-30\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Paypal\FinishShopping.cshtml.g.cs
+C:\Users\stell\OneDrive\Desktop\rewindlatest\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Home\About.cshtml.g.cs
+C:\Users\stell\OneDrive\Desktop\rewindlatest\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Paypal\FinishShopping.cshtml.g.cs
+C:\Users\stell\OneDrive\Desktop\rewindlatest\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Paypal\Index.cshtml.g.cs
