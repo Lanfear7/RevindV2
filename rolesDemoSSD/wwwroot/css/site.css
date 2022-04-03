@@ -247,3 +247,17 @@ main {
 
 @media (min-width: 768px) {
 }
+
+/*********------------------- Footer ---------------*********/
+footer{
+    height:90px;
+    width:100%;
+    border-top:1px solid white;
+}
+footer .container{
+    margin-top:40px;
+    text-align:center;
+    color:white;
+    font-size:22px;
+    
+}
