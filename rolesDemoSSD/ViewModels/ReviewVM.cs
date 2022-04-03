@@ -13,6 +13,7 @@ namespace rolesDemoSSD.ViewModels
         public MovieVM MovieVM { get; set; }
         public int MovieID { get; set; }
         public UserVM UserVM { get; set; }
+        public string ReviewTitle { get; set; }
         public string Email { get; set; }
         public string ReviewContent { get; set; }
         public string ReviewDate { get; set; }

@@ -28,11 +28,12 @@ namespace rolesDemoSSD.Repositories
             return query;
 
         }
-        public bool CreateReview(int movieId, string email, string reviewDate, string reviewContent, int rating, string ratingDate, int flag)
+        public bool CreateReview(int movieId, string reviewTitle, string email, string reviewDate, string reviewContent, int rating, string ratingDate, int flag)
         {
             db.Reviews.Add(new Review
             {
                 MovieID = movieId,
+                ReviewTitle = reviewTitle,
                 Email = email,
                 ReviewContent = reviewContent,
                 ReviewDate = reviewDate,
@@ -42,6 +43,19 @@ namespace rolesDemoSSD.Repositories
             });
             db.SaveChanges();
             return true;
+        }
+        public Review EditReviewById(int id)
+        {
+            var query = db.Reviews.FirstOrDefault(r => r.ReviewID == id);
+
+            return query;
+        }
+        public Review DeleteReviewById(int id)
+        {
+            var query = db.Reviews.FirstOrDefault(r => r.ReviewID == id);
+            db.Remove(query);
+            db.SaveChanges();
+            return query;
         }
     }
 }
