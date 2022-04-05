@@ -60,10 +60,23 @@ namespace rolesDemoSSD.Controllers
             return View();
         }
 
-        public ActionResult EditMovie(int id)
+        [HttpGet]
+        public ActionResult EditMovie()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult EditMovie(MovieVM movieVM)
         {
             MovieRepo movieRepo = new MovieRepo(_context);
-            Movie movieVM = movieRepo.EditMovieById(id);
+            var success = movieRepo.EditMovieById(movieVM.MovieName, movieVM.MovieID, movieVM.PosterSource, movieVM.Genre, movieVM.Duration, movieVM.ReleaseDate, movieVM.Distributor);
+
+            if (success)
+            {
+                return RedirectToAction(nameof(GetAllMovies));
+            }
+            ViewBag.Error = "An error occurred while editing this movie.";
             return View();
         }
 
