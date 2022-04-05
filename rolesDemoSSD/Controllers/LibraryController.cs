@@ -57,6 +57,27 @@ namespace rolesDemoSSD.Controllers
             ViewBag.Error = "An error occurred while creating this movie. Please try again.";
             return View();
         }
+        [HttpGet]
+        public ActionResult CreateReview()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CreateReview(ReviewVM reviewVM)
+        {
+            if (ModelState.IsValid)
+            {
+                ReviewRepo reviewRepo = new ReviewRepo(_context);
+                var success = reviewRepo.CreateReview(reviewVM.MovieID, reviewVM.ReviewTitle, reviewVM.Email,  reviewVM.ReviewDate, reviewVM.ReviewContent,  reviewVM.Rating);
+                if (success)
+                {
+                    return RedirectToAction(nameof(GetAllMovies));
+                }
+            }
+            ViewBag.Error = "An error occurred while creating this movie. Please try again.";
+            return View();
+        }
         public ActionResult EditMovie(int id)
         {
             MovieRepo movieRepo = new MovieRepo(_context);
