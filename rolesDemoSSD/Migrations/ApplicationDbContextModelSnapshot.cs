@@ -372,13 +372,13 @@ namespace rolesDemoSSD.Migrations
                     b.Property<int>("Rating")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("RatingDate")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("ReviewContent")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ReviewDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ReviewTitle")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("UserVMEmail")

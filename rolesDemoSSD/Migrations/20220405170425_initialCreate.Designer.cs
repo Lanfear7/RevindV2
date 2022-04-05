@@ -9,8 +9,8 @@ using rolesDemoSSD.Data;
 namespace rolesDemoSSD.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220402033334_initialcreate")]
-    partial class initialcreate
+    [Migration("20220405170425_initialCreate")]
+    partial class initialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -374,13 +374,13 @@ namespace rolesDemoSSD.Migrations
                     b.Property<int>("Rating")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("RatingDate")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("ReviewContent")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("ReviewDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ReviewTitle")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("UserVMEmail")

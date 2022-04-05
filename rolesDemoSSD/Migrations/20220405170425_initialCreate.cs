@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace rolesDemoSSD.Migrations
 {
-    public partial class initialcreate : Migration
+    public partial class initialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -275,11 +275,11 @@ namespace rolesDemoSSD.Migrations
                     MovieVMMovieID = table.Column<int>(type: "INTEGER", nullable: true),
                     MovieID = table.Column<int>(type: "INTEGER", nullable: false),
                     UserVMEmail = table.Column<string>(type: "TEXT", nullable: true),
+                    ReviewTitle = table.Column<string>(type: "TEXT", nullable: true),
                     Email = table.Column<string>(type: "TEXT", nullable: true),
                     ReviewContent = table.Column<string>(type: "TEXT", nullable: true),
                     ReviewDate = table.Column<string>(type: "TEXT", nullable: true),
                     Rating = table.Column<int>(type: "INTEGER", nullable: false),
-                    RatingDate = table.Column<string>(type: "TEXT", nullable: true),
                     Flag = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
