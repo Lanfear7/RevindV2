@@ -41,7 +41,7 @@
                     <h3 class="Content">ReleaseDate<h5 class="ReleaseDate Item">@Html.DisplayFor(modelItem => item.ReleaseDate)</h5></h3>
                     <h3 class="Content">Distributor<h5 class="Distributor Item">@Html.DisplayFor(modelItem => item.Distributor)</h5></h3>
                     <div class="BtnHolder">
-                        <button>Rent movie now</button>
+                        @Html.Partial("~/Views/Shared/_Paypal.cshtml")
                         <a asp-action="CreateReview">Post a review</a>
                     </div>
                 </div> 

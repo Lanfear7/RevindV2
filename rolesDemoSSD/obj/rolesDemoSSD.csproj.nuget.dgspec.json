@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mykel\\Source\\Repos\\RewindV2\\rolesDemoSSD\\rolesDemoSSD.csproj": {}
+    "C:\\project\\04-05\\rolesDemoSSD\\rolesDemoSSD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mykel\\Source\\Repos\\RewindV2\\rolesDemoSSD\\rolesDemoSSD.csproj": {
+    "C:\\project\\04-05\\rolesDemoSSD\\rolesDemoSSD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mykel\\Source\\Repos\\RewindV2\\rolesDemoSSD\\rolesDemoSSD.csproj",
+        "projectUniqueName": "C:\\project\\04-05\\rolesDemoSSD\\rolesDemoSSD.csproj",
         "projectName": "rolesDemoSSD",
-        "projectPath": "C:\\Users\\mykel\\Source\\Repos\\RewindV2\\rolesDemoSSD\\rolesDemoSSD.csproj",
-        "packagesPath": "C:\\Users\\mykel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mykel\\Source\\Repos\\RewindV2\\rolesDemoSSD\\obj\\",
+        "projectPath": "C:\\project\\04-05\\rolesDemoSSD\\rolesDemoSSD.csproj",
+        "packagesPath": "C:\\Users\\Royce\\.nuget\\packages\\",
+        "outputPath": "C:\\project\\04-05\\rolesDemoSSD\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mykel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Royce\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -97,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

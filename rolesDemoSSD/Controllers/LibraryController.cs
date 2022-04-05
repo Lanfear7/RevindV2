@@ -22,6 +22,7 @@ namespace rolesDemoSSD.Controllers
         }
         public IActionResult GetAllMovies()
         {
+            ViewBag.TotalPrice = "4.99";
             MovieRepo movieRepo = new MovieRepo(_context);
             var query = movieRepo.GetAllMovies();
             return View(query);

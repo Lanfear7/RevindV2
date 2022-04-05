@@ -20,7 +20,7 @@ namespace rolesDemoSSD.Controllers
         // Home page shows list of items. Item price is set through ViewBag.
         public IActionResult Index()
         {
-            ViewBag.TotalPrice = "3.55";
+            ViewBag.TotalPrice = "2.99";
             var items = _context.IPNs;
             return View(items);
         }
