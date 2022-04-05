@@ -39,9 +39,13 @@
                     <h3 class="Content">ReleaseDate<h5 class="ReleaseDate Item">@Html.DisplayFor(modelItem => item.ReleaseDate)</h5></h3>
                     <h3 class="Content">Distributor<h5 class="Distributor Item">@Html.DisplayFor(modelItem => item.Distributor)</h5></h3>
                     <div class="BtnHolder">
-                        <button>Rent movie now</button>
                         <a asp-action="GetMovieById" asp-route-id="@item.MovieID">Post a review</a>
-                        @Html.Partial("~/Views/Shared/_Paypal.cshtml")
+                        @Html.ActionLink("Add to Cart", 
+                            "Index",  
+                            "Paypal" ,
+                            new { id = item.MovieID }, 
+                            null  
+                            )
                     </div>
                 </div>
                 @if (User.IsInRole("Admin"))

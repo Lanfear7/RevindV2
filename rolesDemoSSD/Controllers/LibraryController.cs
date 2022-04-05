@@ -66,7 +66,7 @@ namespace rolesDemoSSD.Controllers
             return View();
         }
 
-        [HttpPost]
+        /*[HttpPost]
         public ActionResult EditMovie(MovieVM movieVM)
         {
             MovieRepo movieRepo = new MovieRepo(_context);
@@ -78,7 +78,7 @@ namespace rolesDemoSSD.Controllers
             }
             ViewBag.Error = "An error occurred while editing this movie.";
             return View();
-        }
+        }*/
 
         public ActionResult DeleteMovie(int id)
         {
