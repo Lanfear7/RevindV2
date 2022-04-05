@@ -28,17 +28,16 @@ namespace rolesDemoSSD.Repositories
             return query;
 
         }
-        public bool CreateReview(int movieId, string reviewTitle, string email, string reviewDate, string reviewContent, int rating)
+        public bool CreateReview(int movieId, string reviewTitle, string reviewContent, int rating)
         {
             db.Reviews.Add(new Review
             {
                 MovieID = movieId,
                 ReviewTitle = reviewTitle,
-                Email = email,
                 ReviewContent = reviewContent,
-                ReviewDate = reviewDate,
+                ReviewDate = DateTime.Now.ToString("HH:mm"),
                 Rating = rating
-            });
+            }); ;
             db.SaveChanges();
             return true;
         }

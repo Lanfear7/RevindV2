@@ -4,7 +4,7 @@
     ViewData["Title"] = "Movie Library - Rewind";
 }
 
-<h1>@Html.DisplayFor(model=> model.MovieName)</h1>
+<h1>@Html.DisplayFor(model => model.MovieName)</h1>
 
 <div>
     <h4>@Html.DisplayFor(model => model.MovieName) Details</h4>
@@ -55,9 +55,9 @@
     </dl>
 </div>
 <div>
-    @*form for reviews*@
+    @Html.Partial("~/Views/Library/CreateReview.cshtml")
 </div>
 <div>
-@*    <a asp-action="Edit" asp-route-id="@Model.MovieID">Edit</a> |
-    <a asp-action="Index">Back to List</a>*@
+    @*    <a asp-action="Edit" asp-route-id="@Model.MovieID">Edit</a> |
+        <a asp-action="Index">Back to List</a>*@
 </div>

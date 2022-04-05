@@ -1,4 +1,5 @@
-﻿using System;
+﻿using rolesDemoSSD.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -10,9 +11,7 @@ namespace rolesDemoSSD.ViewModels
     {
         [Key]
         public int ReviewID { get; set; }
-        public MovieVM MovieVM { get; set; }
         public int MovieID { get; set; }
-        public UserVM UserVM { get; set; }
         public string Email { get; set; }
         public string ReviewTitle { get; set; }
         public string ReviewContent { get; set; }
