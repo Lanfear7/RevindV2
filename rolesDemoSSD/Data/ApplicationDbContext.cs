@@ -50,7 +50,6 @@ namespace rolesDemoSSD.Data
         public string ReviewContent { get; set; }
         public string ReviewDate { get; set; }
         public int Rating { get; set; }
-        public string RatingDate { get; set; }
         public int Flag { get; set; }
 
     }

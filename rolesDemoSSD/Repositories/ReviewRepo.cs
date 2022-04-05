@@ -28,7 +28,7 @@ namespace rolesDemoSSD.Repositories
             return query;
 
         }
-        public bool CreateReview(int movieId, string reviewTitle, string email, string reviewDate, string reviewContent, int rating, string ratingDate, int flag)
+        public bool CreateReview(int movieId, string reviewTitle, string email, string reviewDate, string reviewContent, int rating)
         {
             db.Reviews.Add(new Review
             {
@@ -37,9 +37,7 @@ namespace rolesDemoSSD.Repositories
                 Email = email,
                 ReviewContent = reviewContent,
                 ReviewDate = reviewDate,
-                Rating = rating,
-                RatingDate = ratingDate,
-                Flag = flag
+                Rating = rating
             });
             db.SaveChanges();
             return true;
