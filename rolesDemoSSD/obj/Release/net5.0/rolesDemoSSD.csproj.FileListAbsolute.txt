@@ -883,7 +883,6 @@ C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\A
 C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Home\SecureArea.cshtml.g.cs
-C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Library\Library.cshtml.g.cs
 C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Logbook\Logbook.cshtml.g.cs
 C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Role\Create.cshtml.g.cs
 C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Role\Index.cshtml.g.cs
@@ -891,7 +890,6 @@ C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\V
 C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
 C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Social\Social.cshtml.g.cs
 C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\UserRole\Create.cshtml.g.cs
 C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\UserRole\Detail.cshtml.g.cs
 C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\UserRole\Index.cshtml.g.cs
@@ -4639,3 +4637,14 @@ C:\Users\brenn\OneDrive\Desktop\GitHubRepos\REWINDAPR5\RewindV2\rolesDemoSSD\obj
 C:\Users\brenn\OneDrive\Desktop\GitHubRepos\REWINDAPR5\RewindV2\rolesDemoSSD\obj\Release\net5.0\rolesDemoSSD.genruntimeconfig.cache
 C:\Users\mykel\Source\Repos\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Library\EditMovie.cshtml.g.cs
 C:\Users\mykel\Source\Repos\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Library\GetAllReviews.cshtml.g.cs
+C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Home\About.cshtml.g.cs
+C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Library\CreateMovie.cshtml.g.cs
+C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Library\CreateReview.cshtml.g.cs
+C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Library\EditMovie.cshtml.g.cs
+C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Library\GetAllMovies.cshtml.g.cs
+C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Library\GetAllReviews.cshtml.g.cs
+C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Library\GetMovieById.cshtml.g.cs
+C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Paypal\FinishShopping.cshtml.g.cs
+C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Paypal\Index.cshtml.g.cs
+C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Profile\Profile.cshtml.g.cs
+C:\Users\stell\OneDrive\Desktop\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Shared\_Paypal.cshtml.g.cs
