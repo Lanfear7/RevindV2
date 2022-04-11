@@ -1,0 +1,27 @@
+﻿@model IEnumerable<rolesDemoSSD.ViewModels.ReviewVM>
+
+@{
+    ViewData["Title"] = "Movie Library - Rewind";
+
+}
+
+<h1>Reviews</h1>
+
+
+<div class="reviewContainer">
+    @foreach (var item in Model)
+    {
+    <div class="reviewCard">
+        <h3>@Html.DisplayFor(modelItem => item.Email)</h3>
+        <p class="">Rating: @Html.DisplayFor(modelItem => item.Rating) stars</p>
+        <p class="">
+            @Html.DisplayFor(modelItem => item.ReviewTitle)
+        </p>
+        <p class="">
+            @Html.DisplayFor(modelItem => item.ReviewContent)
+        </p>
+    </div>
+    }
+    
+</div>
+<a class="button" asp-controller="Library" asp-action="CreateReview">Review Movie</a>

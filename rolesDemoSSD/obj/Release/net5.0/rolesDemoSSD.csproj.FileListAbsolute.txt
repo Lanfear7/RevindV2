@@ -4637,3 +4637,5 @@ C:\Users\brenn\OneDrive\Desktop\GitHubRepos\REWINDAPR5\RewindV2\rolesDemoSSD\obj
 C:\Users\brenn\OneDrive\Desktop\GitHubRepos\REWINDAPR5\RewindV2\rolesDemoSSD\obj\Release\net5.0\rolesDemoSSD.Views.pdb
 C:\Users\brenn\OneDrive\Desktop\GitHubRepos\REWINDAPR5\RewindV2\rolesDemoSSD\obj\Release\net5.0\rolesDemoSSD.csproj.CopyComplete
 C:\Users\brenn\OneDrive\Desktop\GitHubRepos\REWINDAPR5\RewindV2\rolesDemoSSD\obj\Release\net5.0\rolesDemoSSD.genruntimeconfig.cache
+C:\Users\mykel\Source\Repos\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Library\EditMovie.cshtml.g.cs
+C:\Users\mykel\Source\Repos\RewindV2\rolesDemoSSD\obj\Release\net5.0\Razor\Views\Library\GetAllReviews.cshtml.g.cs

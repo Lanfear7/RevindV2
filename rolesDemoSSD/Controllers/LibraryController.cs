@@ -86,10 +86,16 @@ namespace rolesDemoSSD.Controllers
             Movie movieVM = movieRepo.DeleteMovieById(id);
             return RedirectToAction(nameof(GetAllMovies));
         }
-        [HttpGet]
-        public ActionResult CreateReview(string MovieID)
+        public IActionResult GetAllReviews()
         {
-            return View(new ReviewVM { MovieID = int.Parse(MovieID), Email = User.Identity.Name });
+            ReviewRepo reviewRepo = new ReviewRepo(_context);
+            var query = reviewRepo.GetAllReviews();
+            return View(query);
+        }
+        [HttpGet]
+        public ActionResult CreateReview()
+        {
+            return View(new ReviewVM {Email = User.Identity.Name });
         }
 
         [HttpPost]

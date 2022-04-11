@@ -28,6 +28,22 @@ namespace rolesDemoSSD.Repositories
             return query;
 
         }
+        public IQueryable<ReviewVM> GetAllReviews()
+        {
+            var query = from r in db.Reviews
+                        select new ReviewVM()
+                        {
+                            Email = r.Email,
+                            MovieID = r.MovieID,
+                            ReviewTitle = r.ReviewTitle,
+                            ReviewContent = r.ReviewContent,
+                            ReviewDate = r.ReviewDate,
+                            Rating = r.Rating
+                        };
+            return query;
+
+        }
+
         public bool CreateReview(int movieId, string reviewTitle, string reviewContent, int rating)
         {
             db.Reviews.Add(new Review
@@ -37,7 +53,7 @@ namespace rolesDemoSSD.Repositories
                 ReviewContent = reviewContent,
                 ReviewDate = DateTime.Now.ToString("HH:mm"),
                 Rating = rating
-            }); ;
+            });
             db.SaveChanges();
             return true;
         }

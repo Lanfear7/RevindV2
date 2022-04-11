@@ -10,15 +10,14 @@
     <div class="col-md-4">
         <form asp-action="CreateReview">
             <div class="form-group">
-                <input asp-for="Rating" type="radio" name="rating" value="1" checked="checked" />
+                <input asp-for="Rating" type="radio" name="rating" value="1"  />
                 <input asp-for="Rating" type="radio" name="rating" value="2" />
                 <input asp-for="Rating" type="radio" name="rating" value="3" />
                 <input asp-for="Rating" type="radio" name="rating" value="4" />
-                <input asp-for="Rating" type="radio" name="rating" value="5" />
-                <input asp-for="Rating" type="radio" name="rating" value="0" />
+                <input asp-for="Rating" type="radio" name="rating" value="5" checked="checked"/>
             </div>
-            <input asp-for="MovieID" type="text" />
-            <input asp-for="Email" type="text" />
+            <input asp-for="MovieID" type="text" hidden/>
+            <input asp-for="Email" type="text" hidden/>
             <div class="form-group">
                 <input asp-for="ReviewTitle" type="text" />
             </div>

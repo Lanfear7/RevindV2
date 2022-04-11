@@ -39,7 +39,10 @@ body {
     background: url(../images/bg.jpg)
 }
 
-
+.button{
+    padding: 10px 14px;
+    border: 1px solid white;
+}
 /*******------------------NAVIGATION---------------*******/
 nav .container {
     display: flex;
@@ -243,7 +246,16 @@ main {
 .checkbox label {
     color: white;
 }
-
+/*********-------------------Reviews page---------------*********/
+.reviewContainer {
+    display: flex;
+    flex-direction: column;
+}
+.reviewCard {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
 
 @media (min-width: 768px) {
 }
